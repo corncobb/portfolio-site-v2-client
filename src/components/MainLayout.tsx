@@ -3,10 +3,10 @@ import { Outlet } from 'react-router-dom';
 import { MainNavbar } from './navigation/main-navbar';
 
 const MainLayoutRoot = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
+  // backgroundColor: theme.palette.background.paper,
   display: 'flex',
   height: '100%',
-  overflow: 'hidden',
+  // overflow: 'hidden',
   width: '100%'
 }));
 
@@ -33,13 +33,7 @@ const MainLayoutContent = styled('div')({
 export const MainLayout = () => (
   <MainLayoutRoot>
     <MainNavbar>
-      <MainLayoutWrapper>
-        <MainLayoutContainer>
-          <MainLayoutContent>
-            <Outlet />
-          </MainLayoutContent>
-        </MainLayoutContainer>
-      </MainLayoutWrapper>
+      <Outlet />
     </MainNavbar>
   </MainLayoutRoot>
 );

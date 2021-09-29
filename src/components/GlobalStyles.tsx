@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     '@global': {
       '*': {
@@ -15,7 +15,7 @@ const useStyles = makeStyles(() =>
         width: '100%'
       },
       body: {
-        backgroundColor: '#f4f6f8',
+        backgroundColor: theme.palette.background.paper,
         height: '100%',
         width: '100%'
       },

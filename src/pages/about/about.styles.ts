@@ -8,7 +8,8 @@ export const useStyles = makeStyles((theme) => ({
     top: theme.spacing(15)
   },
   container: {
-    margin: `${theme.spacing(15)}px auto`
+    paddingTop: theme.spacing(15),
+    paddingBottom: theme.spacing(15)
   },
   subtitle: {
     marginTop: theme.spacing(4)

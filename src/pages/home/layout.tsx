@@ -39,7 +39,10 @@ export const HomeLayout = () => {
   }, []);
 
   return (
-    <Box className={classes.backgroundContainer}>
+    <Box
+      className={classes.backgroundContainer}
+      style={{ height: window.innerHeight }}
+    >
       <Box className={classes.typedContainer}>
         <Grid container justifyContent="center">
           <Avatar
