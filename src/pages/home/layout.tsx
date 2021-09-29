@@ -45,7 +45,7 @@ export const HomeLayout = () => {
           <Avatar
             src={ProfilePic}
             className={classes.avatar}
-            alt="Cameron Cobb"
+            alt="Cameron Cobb Profile Pic"
           />
         </Grid>
         <Typography color="primary" variant="h1" component="h1">
