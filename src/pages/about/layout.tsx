@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Button,
   Chip,
   Container,
   Grid,
@@ -19,6 +20,7 @@ import {
   Tools
 } from '../../assets/data';
 import ProfilePic from '../../assets/images/profile-pic-min.jpg';
+import Resume from '../../assets/resume/Resume-Cameron-Cobb-v1-2.pdf';
 import { useStyles } from './about.styles';
 
 export const AboutLayout = () => {
@@ -39,30 +41,60 @@ export const AboutLayout = () => {
           <Typography color="primary" variant="h1" component="h1">
             Cameron Cobb
           </Typography>
-          <Typography color="textPrimary" variant="h2" component="h2">
+          <Typography
+            color="textPrimary"
+            variant="h2"
+            component="h2"
+            gutterBottom
+          >
             Software Developer
           </Typography>
-          <IconButton
-            component={Link}
-            href={SocialLinks.GitHub}
-            underline="none"
-            target="_blank"
-            aria-label="GitHub"
-            color="primary"
+          <Grid
+            container
+            spacing={1}
+            alignItems="center"
+            className={classes.linksContainer}
           >
-            <GitHub />
-          </IconButton>
-          <IconButton
-            component={Link}
-            href={SocialLinks.LinkedIn}
-            underline="none"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            aria-label="LinkedIn"
-            color="primary"
-          >
-            <LinkedIn />
-          </IconButton>
+            <Button
+              variant="contained"
+              color="primary"
+              component="a"
+              fullWidth
+              href={Resume}
+              classes={{ root: classes.resumeButton }}
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              Printable Resume
+            </Button>
+
+            <Grid item>
+              <IconButton
+                component={Link}
+                href={SocialLinks.GitHub}
+                underline="none"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                aria-label="GitHub"
+                color="primary"
+              >
+                <GitHub />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton
+                component={Link}
+                href={SocialLinks.LinkedIn}
+                underline="none"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                aria-label="LinkedIn"
+                color="primary"
+              >
+                <LinkedIn />
+              </IconButton>
+            </Grid>
+          </Grid>
           <Typography
             variant="h3"
             component="h3"
@@ -80,6 +112,7 @@ export const AboutLayout = () => {
               target="_blank"
               underline="none"
               color="textSecondary"
+              style={{ fontWeight: 1000 }}
             >
               Foodnome INC
             </Link>{' '}

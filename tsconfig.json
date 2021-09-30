@@ -3,15 +3,11 @@
     "target": "es5",
     "module": "esnext",
     "strict": true,
+    "typeRoots": ["./src/types"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "es5",
-      "es6",
-      "dom",
-      "esnext"
-    ],
+    "lib": ["es5", "es6", "dom", "esnext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
@@ -25,7 +21,5 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["./src/**/*"]
 }

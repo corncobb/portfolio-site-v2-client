@@ -41,6 +41,8 @@ export const HomeLayout = () => {
   return (
     <Box
       className={classes.backgroundContainer}
+      // window.innerHeight is used to help with IOS safari and their stupid top
+      // and bottom bars along with their crappy scrolling
       style={{ height: window.innerHeight }}
     >
       <Box className={classes.typedContainer}>

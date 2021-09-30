@@ -13,5 +13,13 @@ export const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     marginTop: theme.spacing(4)
+  },
+  resumeButton: {
+    [theme.breakpoints.up('md')]: {
+      maxWidth: theme.spacing(32)
+    }
+  },
+  linksContainer: {
+    paddingTop: theme.spacing(1)
   }
 }));
