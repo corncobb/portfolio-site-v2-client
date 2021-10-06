@@ -9,5 +9,8 @@ export const useStyles = makeStyles((theme) => ({
     WebkitBoxOrient: 'vertical',
     lineClamp: 6,
     WebkitLineClamp: 6
+  },
+  cardRoot: {
+    margin: 'auto'
   }
 }));

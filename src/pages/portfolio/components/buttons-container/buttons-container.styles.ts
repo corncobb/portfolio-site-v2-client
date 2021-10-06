@@ -24,5 +24,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   linksContainer: {
     marginTop: theme.spacing(2)
+  },
+  input: {
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    WebkitTouchCallout: 'none',
+    border: `1px solid ${theme.palette.primary}`,
+    width: '100%',
+    padding: '0 1rem',
+    ...theme.typography.body1,
+    marginBottom: theme.spacing(2)
+  },
+  dialogPaper: {
+    backgroundColor: theme.palette.background.default
   }
 }));

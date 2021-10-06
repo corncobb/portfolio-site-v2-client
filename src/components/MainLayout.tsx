@@ -10,26 +10,6 @@ const MainLayoutRoot = styled('div')(({ theme }) => ({
   width: '100%'
 }));
 
-const MainLayoutWrapper = styled('div')({
-  display: 'flex',
-  flex: '1 1 auto',
-  overflow: 'hidden',
-
-  height: '100%'
-});
-
-const MainLayoutContainer = styled('div')({
-  display: 'flex',
-  flex: '1 1 auto',
-  overflow: 'hidden'
-});
-
-const MainLayoutContent = styled('div')({
-  flex: '1 1 auto',
-  height: '100%',
-  overflow: 'auto'
-});
-
 export const MainLayout = () => (
   <MainLayoutRoot>
     <MainNavbar>

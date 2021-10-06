@@ -4,16 +4,20 @@ import {
   Dialog,
   Fab,
   Grid,
+  IconButton,
+  Link,
   makeStyles,
   Typography
 } from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { useContext, useState } from 'react';
 import { GlobalAppContext } from 'src/store/global-app-context';
 import { ActionTypes } from 'src/store/reducer';
+import { SocialLinks } from '../../assets/data';
 import { NavRoutes } from './nav-routes';
 
 const useStyles = makeStyles((theme) => ({
@@ -102,7 +106,7 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
         </AppBar>
         <Grid
           container
-          style={{ height: '100%' }}
+          style={{ height: '100%', flexWrap: 'nowrap' }}
           direction="column"
           justifyContent="center"
           alignItems="center"
@@ -122,10 +126,52 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
           <Grid item style={{ flexGrow: 1 }}>
             <NavRoutes onClick={handleClose} />
           </Grid>
-          <Grid item style={{ padding: '3rem' }}>
-            <Typography color="textPrimary" style={{ textAlign: 'center' }}>
-              Copyright © {new Date().getFullYear()} CamCobb.com. All rights
-              reserved.
+          <Grid item>
+            <Grid container>
+              <Grid item>
+                <IconButton
+                  component={Link}
+                  href={SocialLinks.GitHub}
+                  underline="none"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  aria-label="GitHub"
+                  color="primary"
+                >
+                  <GitHub />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  component={Link}
+                  href={SocialLinks.LinkedIn}
+                  underline="none"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  color="primary"
+                >
+                  <LinkedIn />
+                </IconButton>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              style={{ textAlign: 'center' }}
+              gutterBottom
+            >
+              Copyright © {new Date().getFullYear()} CamCobb.com.
+            </Typography>
+          </Grid>
+          <Grid item style={{ padding: '2rem', paddingTop: 0 }}>
+            <Typography
+              color="textPrimary"
+              style={{ textAlign: 'center' }}
+              gutterBottom
+            >
+              Built with ❤️ using React, TypeScript, and Material UI.
             </Typography>
           </Grid>
         </Grid>

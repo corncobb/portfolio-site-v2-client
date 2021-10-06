@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   portfolioCardContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill,minmax(345px, 1fr))'
+    justifyContent: 'center',
+    gridTemplateColumns: 'repeat(auto-fill,minmax(245px, 345px))'
   }
 }));

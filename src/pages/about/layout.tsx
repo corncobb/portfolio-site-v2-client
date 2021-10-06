@@ -103,7 +103,7 @@ export const AboutLayout = () => {
           >
             About
           </Typography>
-          <Typography variant="body1" align="left" color="textPrimary">
+          <Typography variant="body1" color="textPrimary">
             I am an experienced Software Developer with +3 years of development
             experience. I am a Full-Stack Software Developer at{' '}
             <Link
@@ -140,8 +140,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {Languages.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>
@@ -156,8 +156,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {Frameworks.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>
@@ -172,8 +172,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {Tools.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>
@@ -188,8 +188,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {CloudServices.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>
@@ -204,8 +204,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {DevTools.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>
@@ -220,8 +220,8 @@ export const AboutLayout = () => {
           </Typography>
           <Grid container spacing={1}>
             {Other.map((tag, index) => (
-              <Grid item>
-                <Chip key={index} label={tag} size="small" />
+              <Grid item key={index}>
+                <Chip label={tag} size="small" />
               </Grid>
             ))}
           </Grid>

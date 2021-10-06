@@ -2,7 +2,7 @@ import { Typography } from '@material-ui/core';
 import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { IProject } from '../../projects/projects';
+import { IProject } from 'src/assets/data';
 import { useStyles } from './project-card.styles';
 
 interface IProps {
@@ -12,11 +12,15 @@ interface IProps {
 export const ProjectCard: React.FC<IProps> = ({ project }) => {
   const classes = useStyles();
   return (
-    <Card sx={{ maxWidth: 345 }} elevation={4}>
+    <Card
+      sx={{ maxWidth: 345 }}
+      elevation={4}
+      classes={{ root: classes.cardRoot }}
+    >
       <CardActionArea component={Link} to={project.slug}>
         <CardMedia
           component="img"
-          height="140"
+          height="180"
           image={project.imageUrl}
           alt={project.slug}
         />

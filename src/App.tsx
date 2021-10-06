@@ -20,7 +20,7 @@ export const App = () => {
             900: '#000000'
           },
           background: {
-            // default: '#000000'
+            default: '#ffffff',
 
             paper: state.isDarkMode ? '#000000' : '#ffffff'
           },
