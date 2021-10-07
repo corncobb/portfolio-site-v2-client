@@ -31,5 +31,8 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: 0,
     left: 0
+  },
+  learnMoreButton: {
+    marginTop: theme.spacing(3)
   }
 }));

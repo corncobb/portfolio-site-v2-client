@@ -13,6 +13,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { TransitionProps } from '@mui/material/transitions';
 import React, { useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { IProject } from 'src/assets/data';
 import { useStyles } from './buttons-container.styles';
 
@@ -62,38 +63,44 @@ export const ButtonsContainer: React.FC<IProps> = ({ project }) => {
         className={classes.linksContainer}
       >
         <Grid item xs={2}>
-          <IconButton onClick={() => setOpenDialog(true)}>
-            <ShareIcon />
-          </IconButton>
+          <Fade triggerOnce={true} delay={100}>
+            <IconButton onClick={() => setOpenDialog(true)}>
+              <ShareIcon />
+            </IconButton>
+          </Fade>
         </Grid>
         {project.sourceUrl && (
           <Grid item xs={10} md={5}>
-            <Button
-              variant="outlined"
-              fullWidth
-              color="primary"
-              href={project.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              startIcon={<CodeIcon />}
-            >
-              Source
-            </Button>
+            <Fade triggerOnce={true} delay={200}>
+              <Button
+                variant="outlined"
+                fullWidth
+                color="primary"
+                href={project.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                startIcon={<CodeIcon />}
+              >
+                Source
+              </Button>
+            </Fade>
           </Grid>
         )}
         {project.liveUrl && (
           <Grid item xs={12} md={5}>
-            <Button
-              variant="contained"
-              fullWidth
-              color="primary"
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              startIcon={<PlayArrowIcon />}
-            >
-              Demo
-            </Button>
+            <Fade triggerOnce={true} delay={400}>
+              <Button
+                variant="contained"
+                fullWidth
+                color="primary"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                startIcon={<PlayArrowIcon />}
+              >
+                Demo
+              </Button>
+            </Fade>
           </Grid>
         )}
       </Grid>

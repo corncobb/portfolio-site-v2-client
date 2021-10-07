@@ -2,6 +2,7 @@ import { List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 import HomeIcon from '@material-ui/icons/Home';
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -73,21 +74,26 @@ export const NavRoutes: React.FC<INavRoutesProps> = ({ onClick }) => {
 
   return (
     <List>
-      {routes.map((route: IRoutes) => {
+      {routes.map((route: IRoutes, idx: number) => {
         return (
           route.show && (
-            <ListItem
-              key={route.name}
-              component={NavLink}
-              to={route.path}
-              className={classes.listItem}
-              onClick={onClick}
-            >
-              <ListItemText
-                classes={{ primary: classes.text }}
-                primary={route.name}
-              />
-            </ListItem>
+            <Fade key={route.name} triggerOnce={true} delay={idx * 150}>
+              <ListItem
+                component={NavLink}
+                to={route.path}
+                className={classes.listItem}
+                onClick={() => {
+                  onClick();
+                  // Scroll to top on route change
+                  window.scroll(0, 0);
+                }}
+              >
+                <ListItemText
+                  classes={{ primary: classes.text }}
+                  primary={route.name}
+                />
+              </ListItem>
+            </Fade>
           )
         );
       })}

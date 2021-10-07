@@ -1,5 +1,3 @@
-import img from 'src/assets/images/coding-background-2-min.jpg';
-
 export const SocialLinks = {
   LinkedIn: 'https://www.linkedin.com/in/cameron-cobb/',
   GitHub: 'https://github.com/corncobb'
@@ -79,10 +77,35 @@ export interface IProject {
   status: 'COMPLETED' | 'IN_PROGRESS' | 'STARTED';
   type: 'HACKATHON' | 'PERSONAL' | 'CONTRACT' | 'INTERVIEW' | 'PROTOTYPE';
   sourceUrl?: string;
-  liveUrl: string;
+  liveUrl?: string;
 }
 
 export const Projects = [
+  {
+    title: 'Portfolio Website V2',
+    slug: 'portfolio-site-v2',
+    stack: ['React', 'TypeScript', 'Material UI', 'Cloudinary'],
+    description:
+      'This is my newest portfolio website. It is very similar to my first portfolio site. The only differences are that I built it with TypeScript, added revealing animation, added better routing, dark mode, and is just better built overall.\n\nPlans for my v3 portfolio site will include a backend with a SSR or static front-end, and a GraphQL api.',
+    imageUrl:
+      'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633624713/camcobb-website-v2_kdspeo.png',
+    status: 'COMPLETED',
+    type: 'PERSONAL',
+    sourceUrl: '//github.com/corncobb/portfolio-site-v2-client',
+    liveUrl: 'https://www.camcobb.com/'
+  },
+  {
+    title: 'Rugme.finance',
+    slug: 'rugme-finance',
+    stack: ['Web3', 'React', 'TypeScript', 'Material UI', 'Solidity'],
+    description:
+      'Rugme.finance was my first take with a crypto based project. Features included a gambling/lottery page where users could gamble BNB in hopes of hitting a jackpot. And a farming feature where users could stake Liquidity Pool (LP) tokens in order to earn RUG tokens overtime.\n\nThis project was mostly a charity project for users in the crypto community that have been affected or scammed due to a rug pull.\n\nWe added a built in chat system so users could chat while farming for RUG tokens!',
+    imageUrl:
+      'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633555812/rugme-finance_ko4yze.png',
+    status: 'COMPLETED',
+    type: 'CONTRACT',
+    liveUrl: 'https://www.rugme.finance/'
+  },
   {
     title: 'Path Finding Algorithm Maze',
     slug: 'path-finding-algorithm-maze-react',
@@ -109,7 +132,7 @@ export const Projects = [
       'Google Firebase'
     ],
     description:
-      'Yes... it is another todo app... but this one is a cross platform Todo App that was built off of Quasar framework! The app uses Electron and Cordova to be able to work as Windows, Mac, Android, and IOS apps. The tasks in the app update in realtime between platforms.',
+      'Yes... it is another todo app... but this one is a cross platform todo app that was built off of Quasar framework! The app uses Electron and Cordova to be able to work as Windows, Mac, Android, and IOS apps. The tasks in the app update in realtime between platforms.',
     imageUrl:
       'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633555413/quasar-todo-project_fd1zlq.png',
     started: 'August 14, 2019',
@@ -128,33 +151,9 @@ export const Projects = [
       'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633555413/lendu-llc-portals_gjpqnp.png',
 
     status: 'COMPLETED',
-    type: 'PROTOTYPE',
-    liveUrl: '//employer.mylendu.com'
+    type: 'PROTOTYPE'
   },
-  {
-    title: 'Rugme.finance',
-    slug: 'rugme-finance',
-    stack: ['Web3', 'React', 'TypeScript', 'Material UI', 'Solidity'],
-    description:
-      'Rugme.finance was my first take with a crypto based project. Features included a gambling/lottery page where users could gamble BNB in hopes of hitting a jackpot. And a farming feature where users could stake Liquidity Pool (LP) tokens in order to earn RUG tokens overtime.\n\nThis project was mostly a charity project for users in the crypto community that have been affected or scammed due to a rug pull.\n\nWe added a built in chat system so users could chat while farming for RUG tokens!',
-    imageUrl:
-      'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633555812/rugme-finance_ko4yze.png',
-    status: 'COMPLETED',
-    type: 'CONTRACT',
-    liveUrl: 'https://www.rugme.finance/'
-  },
-  {
-    title: 'Portfolio Website V2',
-    slug: 'portfolio-site-v2',
-    stack: ['React', 'TypeScript', 'Material UI', 'Cloudinary'],
-    description:
-      'This is my newest portfolio website. It is very similar to my first portfolio site. The only differences are that I built it with TypeScript, added revealing animation, added better routing, dark mode, and is just better built overall.\n\nPlans for my v3 portfolio site will include a backend with a SSR or static front-end, and a GraphQL api.',
-    imageUrl: img,
-    status: 'COMPLETED',
-    type: 'PERSONAL',
-    sourceUrl: '//github.com/corncobb/quasar-todo-project',
-    liveUrl: 'https://www.camcobb.com/'
-  },
+
   {
     title: 'Portfolio Website V1',
     slug: 'portfolio-site',
@@ -165,19 +164,21 @@ export const Projects = [
       'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633555809/camcobb-website-v1_grdtwt.png',
     status: 'COMPLETED',
     type: 'PERSONAL',
-    liveUrl: 'https://www.camcobb.com/'
+    sourceUrl: '//github.com/corncobb/portfolio-website',
+    liveUrl: '//portfolio-website-v1.camcobb.com/'
   },
   {
-    title: 'Budgety',
-    slug: 'budgety',
+    title: 'Budgetify',
+    slug: 'Budgetify',
     stack: ['JavaScript'],
     description:
       'This was my first real JavaScript project. It was a very simple budgeting app that would tract your income and expenses and give you an output of how much money you have left over (or owed assuming you spend more than what you made).\n\nThis project was loosely based off of a project in a JavaScript Udemy course.',
-    imageUrl: img,
+    imageUrl:
+      'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633625622/Budgetify_fiafo5.png',
     status: 'COMPLETED',
     type: 'PERSONAL',
-    sourceUrl: '//github.com/corncobb/quasar-todo-project',
-    liveUrl: '//www.camcobb.com/'
+    sourceUrl: '//github.com/corncobb/budget-app',
+    liveUrl: '//budgetify.camcobb.com/'
   },
   {
     title: 'Security Card Reader',

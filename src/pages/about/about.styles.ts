@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme) => ({
   avatar: {
     width: '100%',
-    height: 'auto',
+    height: 'auto'
+  },
+  avatarContainer: {
     position: 'sticky',
     top: theme.spacing(15)
   },

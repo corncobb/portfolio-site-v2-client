@@ -1,5 +1,6 @@
 import { Avatar, Chip, Container, Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { Navigate, useParams } from 'react-router';
 import { IProject, Projects } from 'src/assets/data';
 import { ButtonsContainer } from '../buttons-container/buttons-container';
@@ -20,42 +21,52 @@ export const ProjectDetail = () => {
     <Container maxWidth="lg" className={classes.container}>
       <Grid container direction="row" alignContent="center" spacing={4}>
         <Grid item xs={12} md={6}>
-          <Avatar
-            src={project.imageUrl}
-            className={classes.avatar}
-            variant="square"
-            alt={project.title}
-          />
+          <Fade triggerOnce={true} delay={100}>
+            <Avatar
+              src={project.imageUrl}
+              className={classes.avatar}
+              variant="square"
+              alt={project.title}
+            />
+          </Fade>
 
           <ButtonsContainer project={project} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography color="primary" variant="h1" component="h1">
-            {project.title}
-          </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h2"
-            component="h2"
-            gutterBottom
-            className={classes.type}
-          >
-            {project.type.toLowerCase()}
-          </Typography>
+          <Fade triggerOnce={true} delay={150}>
+            <Typography color="primary" variant="h1" component="h1">
+              {project.title}
+            </Typography>
+          </Fade>
+          <Fade triggerOnce={true} delay={200}>
+            <Typography
+              color="textPrimary"
+              variant="h2"
+              component="h2"
+              gutterBottom
+              className={classes.type}
+            >
+              {project.type.toLowerCase()}
+            </Typography>
+          </Fade>
           <Grid container spacing={1}>
             {project.stack.map((tag, index) => (
               <Grid item key={index}>
-                <Chip label={tag} size="small" />
+                <Fade triggerOnce={true} delay={index * 200}>
+                  <Chip label={tag} size="small" />
+                </Fade>
               </Grid>
             ))}
           </Grid>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-            className={classes.projectDescription}
-          >
-            {project.description}
-          </Typography>
+          <Fade triggerOnce={true} delay={300}>
+            <Typography
+              variant="body1"
+              color="textPrimary"
+              className={classes.projectDescription}
+            >
+              {project.description}
+            </Typography>
+          </Fade>
         </Grid>
       </Grid>
     </Container>

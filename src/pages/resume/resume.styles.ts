@@ -124,5 +124,15 @@ export const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginBottom: theme.spacing(5)
+  },
+  topContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  resumeButton: {
+    marginBottom: theme.spacing(2),
+    width: 245
   }
 }));

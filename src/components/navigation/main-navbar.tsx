@@ -15,6 +15,7 @@ import { GitHub, LinkedIn } from '@material-ui/icons';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { useContext, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { GlobalAppContext } from 'src/store/global-app-context';
 import { ActionTypes } from 'src/store/reducer';
 import { SocialLinks } from '../../assets/data';
@@ -113,15 +114,17 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
         >
           <Grid item>
             {/* Toggle dark mode */}
-            <Typography
-              color="textSecondary"
-              variant="h1"
-              component="p"
-              style={{ cursor: 'pointer' }}
-              onClick={() => handleDarkModeChange(!state.isDarkMode)}
-            >
-              {state.isDarkMode ? <>🌝</> : <>🌚</>}
-            </Typography>
+            <Fade triggerOnce={true}>
+              <Typography
+                color="textSecondary"
+                variant="h1"
+                component="p"
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleDarkModeChange(!state.isDarkMode)}
+              >
+                {state.isDarkMode ? <>🌝</> : <>🌚</>}
+              </Typography>
+            </Fade>
           </Grid>
           <Grid item style={{ flexGrow: 1 }}>
             <NavRoutes onClick={handleClose} />
@@ -129,50 +132,58 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
           <Grid item>
             <Grid container>
               <Grid item>
-                <IconButton
-                  component={Link}
-                  href={SocialLinks.GitHub}
-                  underline="none"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                  aria-label="GitHub"
-                  color="primary"
-                >
-                  <GitHub />
-                </IconButton>
+                <Fade triggerOnce={true} delay={750}>
+                  <IconButton
+                    component={Link}
+                    href={SocialLinks.GitHub}
+                    underline="none"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                    aria-label="GitHub"
+                    color="primary"
+                  >
+                    <GitHub />
+                  </IconButton>
+                </Fade>
               </Grid>
               <Grid item>
-                <IconButton
-                  component={Link}
-                  href={SocialLinks.LinkedIn}
-                  underline="none"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  color="primary"
-                >
-                  <LinkedIn />
-                </IconButton>
+                <Fade triggerOnce={true} delay={800}>
+                  <IconButton
+                    component={Link}
+                    href={SocialLinks.LinkedIn}
+                    underline="none"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    color="primary"
+                  >
+                    <LinkedIn />
+                  </IconButton>
+                </Fade>
               </Grid>
             </Grid>
           </Grid>
           <Grid item>
-            <Typography
-              color="textPrimary"
-              style={{ textAlign: 'center' }}
-              gutterBottom
-            >
-              Copyright © {new Date().getFullYear()} CamCobb.com.
-            </Typography>
+            <Fade triggerOnce={true} delay={900}>
+              <Typography
+                color="textPrimary"
+                style={{ textAlign: 'center' }}
+                gutterBottom
+              >
+                Copyright © {new Date().getFullYear()} CamCobb.com.
+              </Typography>
+            </Fade>
           </Grid>
           <Grid item style={{ padding: '2rem', paddingTop: 0 }}>
-            <Typography
-              color="textPrimary"
-              style={{ textAlign: 'center' }}
-              gutterBottom
-            >
-              Built with ❤️ using React, TypeScript, and Material UI.
-            </Typography>
+            <Fade triggerOnce={true} delay={1050}>
+              <Typography
+                color="textPrimary"
+                style={{ textAlign: 'center' }}
+                gutterBottom
+              >
+                Built with ❤️ using React, TypeScript, and Material UI.
+              </Typography>
+            </Fade>
           </Grid>
         </Grid>
       </Dialog>
