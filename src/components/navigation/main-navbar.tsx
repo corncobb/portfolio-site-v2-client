@@ -81,7 +81,7 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="back-to-top-anchor">
       <Fab
         variant="extended"
         color="primary"

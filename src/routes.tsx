@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { MainLayout } from 'src/components/MainLayout';
+import { MainLayout } from 'src/components/main-layout';
 import {
   About,
   Contact,
