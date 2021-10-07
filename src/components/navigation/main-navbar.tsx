@@ -4,16 +4,21 @@ import {
   Dialog,
   Fab,
   Grid,
+  IconButton,
+  Link,
   makeStyles,
   Typography
 } from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { useContext, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { GlobalAppContext } from 'src/store/global-app-context';
 import { ActionTypes } from 'src/store/reducer';
+import { SocialLinks } from '../../assets/data';
 import { NavRoutes } from './nav-routes';
 
 const useStyles = makeStyles((theme) => ({
@@ -76,7 +81,7 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="back-to-top-anchor">
       <Fab
         variant="extended"
         color="primary"
@@ -102,31 +107,83 @@ export const MainNavbar: React.FC<IProps> = ({ children }) => {
         </AppBar>
         <Grid
           container
-          style={{ height: '100%' }}
+          style={{ height: '100%', flexWrap: 'nowrap' }}
           direction="column"
           justifyContent="center"
           alignItems="center"
         >
           <Grid item>
             {/* Toggle dark mode */}
-            <Typography
-              color="textSecondary"
-              variant="h1"
-              component="p"
-              style={{ cursor: 'pointer' }}
-              onClick={() => handleDarkModeChange(!state.isDarkMode)}
-            >
-              {state.isDarkMode ? <>🌝</> : <>🌚</>}
-            </Typography>
+            <Fade triggerOnce={true}>
+              <Typography
+                color="textSecondary"
+                variant="h1"
+                component="p"
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleDarkModeChange(!state.isDarkMode)}
+              >
+                {state.isDarkMode ? <>🌝</> : <>🌚</>}
+              </Typography>
+            </Fade>
           </Grid>
           <Grid item style={{ flexGrow: 1 }}>
             <NavRoutes onClick={handleClose} />
           </Grid>
-          <Grid item style={{ padding: '3rem' }}>
-            <Typography color="textPrimary" style={{ textAlign: 'center' }}>
-              Copyright © {new Date().getFullYear()} CamCobb.com. All rights
-              reserved.
-            </Typography>
+          <Grid item>
+            <Grid container>
+              <Grid item>
+                <Fade triggerOnce={true} delay={750}>
+                  <IconButton
+                    component={Link}
+                    href={SocialLinks.GitHub}
+                    underline="none"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                    aria-label="GitHub"
+                    color="primary"
+                  >
+                    <GitHub />
+                  </IconButton>
+                </Fade>
+              </Grid>
+              <Grid item>
+                <Fade triggerOnce={true} delay={800}>
+                  <IconButton
+                    component={Link}
+                    href={SocialLinks.LinkedIn}
+                    underline="none"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    color="primary"
+                  >
+                    <LinkedIn />
+                  </IconButton>
+                </Fade>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Fade triggerOnce={true} delay={900}>
+              <Typography
+                color="textPrimary"
+                style={{ textAlign: 'center' }}
+                gutterBottom
+              >
+                Copyright © {new Date().getFullYear()} CamCobb.com.
+              </Typography>
+            </Fade>
+          </Grid>
+          <Grid item style={{ padding: '2rem', paddingTop: 0 }}>
+            <Fade triggerOnce={true} delay={1050}>
+              <Typography
+                color="textPrimary"
+                style={{ textAlign: 'center' }}
+                gutterBottom
+              >
+                Built with ❤️ using React, TypeScript, and Material UI.
+              </Typography>
+            </Fade>
           </Grid>
         </Grid>
       </Dialog>

@@ -1,9 +1,11 @@
-import { Avatar, Box, Grid, Typography } from '@material-ui/core';
+import { Avatar, Box, Button, Grid, Typography } from '@material-ui/core';
 import React, { useContext, useEffect, useRef } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import { NavLink } from 'react-router-dom';
 import Particles from 'react-tsparticles';
+import { ProfilePic } from 'src/assets/data';
 import { GlobalAppContext } from 'src/store/global-app-context';
 import Typed from 'typed.js';
-import ProfilePic from '../../assets/images/profile-pic-min.jpg';
 import { useStyles } from './home.styles';
 
 export const HomeLayout = () => {
@@ -15,7 +17,7 @@ export const HomeLayout = () => {
   useEffect(() => {
     const typed1 = new Typed(el1.current, {
       strings: ['Cameron Cobb'],
-
+      startDelay: 1000,
       typeSpeed: 40
     });
     const typed2 = new Typed(el2.current, {
@@ -25,6 +27,7 @@ export const HomeLayout = () => {
         'Full-Stack Software Developer'
       ],
 
+      startDelay: 1500,
       typeSpeed: 40,
       backSpeed: 60,
       backDelay: 2000,
@@ -39,27 +42,63 @@ export const HomeLayout = () => {
   }, []);
 
   return (
-    <Box className={classes.backgroundContainer}>
+    <Box
+      className={classes.backgroundContainer}
+      // window.innerHeight is used to help with IOS safari and their stupid top
+      // and bottom bars along with their crappy scrolling
+      style={{ height: window.innerHeight }}
+    >
       <Box className={classes.typedContainer}>
-        <Grid container justifyContent="center">
-          <Avatar
-            src={ProfilePic}
-            className={classes.avatar}
-            alt="Cameron Cobb"
-          />
-        </Grid>
-        <Typography color="primary" variant="h1" component="h1">
-          <span ref={el1}></span>
-        </Typography>
-        <br />
-        <Typography
-          className={classes.subtitle}
-          color="textPrimary"
-          variant="h3"
-          component="h3"
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
         >
-          <span ref={el2}></span>
-        </Typography>
+          <Grid item>
+            <Fade triggerOnce={true} delay={250}>
+              <Avatar
+                src={ProfilePic}
+                className={classes.avatar}
+                alt="Cameron Cobb Profile Pic"
+              />
+            </Fade>
+          </Grid>
+          <Grid item>
+            <Fade triggerOnce={true} delay={500}>
+              <Typography color="primary" variant="h1" component="h1">
+                <span ref={el1}></span>
+              </Typography>
+            </Fade>
+          </Grid>
+          <br />
+          <Grid item>
+            <Fade triggerOnce={true} delay={750}>
+              <Typography
+                className={classes.subtitle}
+                color="textPrimary"
+                variant="h3"
+                component="h3"
+              >
+                <span ref={el2}></span>
+              </Typography>
+            </Fade>
+          </Grid>
+          <Grid item>
+            <Fade triggerOnce={true} delay={1000}>
+              <Button
+                variant="contained"
+                color="primary"
+                component={NavLink}
+                to={'/about'}
+                size="large"
+                className={classes.learnMoreButton}
+              >
+                About Me
+              </Button>
+            </Fade>
+          </Grid>
+        </Grid>
       </Box>
       <Particles
         canvasClassName={classes.particlesCanvas}

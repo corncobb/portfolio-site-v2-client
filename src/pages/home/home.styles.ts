@@ -14,22 +14,25 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%'
+    width: '100%'
   },
   typedContainer: {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '90vw',
     textAlign: 'center',
     zIndex: 1,
-    userSelect: 'none'
+    userSelect: 'none',
+    width: '100%',
+    maxWidth: theme.spacing(45)
   },
   particlesCanvas: {
     position: 'absolute',
     top: 0,
     left: 0
+  },
+  learnMoreButton: {
+    marginTop: theme.spacing(3)
   }
 }));

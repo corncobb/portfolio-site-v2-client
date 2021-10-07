@@ -1,8 +1,11 @@
-import { createTheme, ThemeProvider } from '@material-ui/core';
-import React, { useReducer } from 'react';
+import { createTheme, Fab, ThemeProvider } from '@material-ui/core';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import React, { useEffect, useReducer } from 'react';
 import { useRoutes } from 'react-router-dom';
-import { GlobalStyles } from 'src/components/GlobalStyles';
+import { GlobalStyles } from 'src/components/global-styles';
 import { routes } from 'src/routes';
+import { ScrollTop } from './components/scroll-top';
+import { StartConsoleLog } from './components/start-console-log';
 import { GlobalAppContext } from './store/global-app-context';
 import { initialState, reducer } from './store/reducer';
 import { Typography } from './theme/typography';
@@ -10,6 +13,10 @@ import { Typography } from './theme/typography';
 export const App = () => {
   const routing = useRoutes(routes);
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    StartConsoleLog();
+  }, []);
 
   const theme: any = React.useMemo(
     () =>
@@ -20,7 +27,7 @@ export const App = () => {
             900: '#000000'
           },
           background: {
-            // default: '#000000'
+            default: '#ffffff',
 
             paper: state.isDarkMode ? '#000000' : '#ffffff'
           },
@@ -59,6 +66,11 @@ export const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {routing}
+        <ScrollTop>
+          <Fab color="primary" size="medium" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
       </ThemeProvider>
     </GlobalAppContext.Provider>
   );

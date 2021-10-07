@@ -1,12 +1,21 @@
 import { createStyles, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     '@global': {
       '*': {
         boxSizing: 'border-box',
         margin: 0,
         padding: 0
+      },
+      ul: {
+        display: 'block',
+        listStyleType: 'disc',
+        marginBlockStart: '1em',
+        marginBlockEnd: '1em',
+        marginInlineStart: 0,
+        marginInlineEnd: 0,
+        paddingInlineStart: 20
       },
       html: {
         '-webkit-font-smoothing': 'antialiased',
@@ -15,7 +24,7 @@ const useStyles = makeStyles(() =>
         width: '100%'
       },
       body: {
-        backgroundColor: '#f4f6f8',
+        backgroundColor: theme.palette.background.paper,
         height: '100%',
         width: '100%'
       },

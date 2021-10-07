@@ -6,8 +6,10 @@ export const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(15),
     height: '100%'
   },
-  linkedInButton: {
-    width: theme.spacing(15),
-    height: theme.spacing(15)
+  innerContainer: {
+    height: '100%'
+  },
+  avatar: {
+    fontSize: `${theme.spacing(30)}px !important`
   }
 }));

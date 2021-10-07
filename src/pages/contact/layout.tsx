@@ -1,17 +1,35 @@
-import { Container, Typography } from '@material-ui/core';
-import React, { useContext } from 'react';
-import { GlobalAppContext } from 'src/store/global-app-context';
+import { Container, Grid, IconButton, Link } from '@material-ui/core';
+import { LinkedIn } from '@material-ui/icons';
+import React from 'react';
+import { SocialLinks } from '../../assets/data';
 import { useStyles } from './contact.styles';
 
 export const ContactLayout = () => {
-  const { state } = useContext(GlobalAppContext);
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg">
-      <Typography component="h1" variant="h1" color="textPrimary">
-        Contact
-      </Typography>
+    <Container maxWidth="lg" className={classes.container}>
+      <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignContent="center"
+        style={{ height: '100%' }}
+      >
+        <Grid item>
+          <IconButton
+            component={Link}
+            href={SocialLinks.LinkedIn}
+            underline="none"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            aria-label="LinkedIn"
+            color="primary"
+          >
+            <LinkedIn classes={{ root: classes.linkedInButton }} />
+          </IconButton>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
