@@ -4,6 +4,8 @@
 
 portfolio-site-v2-client uses React, TypeScript, and Material UI.
 
+View my live site at [CamCobb.com](https://camcobb.com)
+
 ## Getting Started
 
 1. `npm install`
@@ -42,4 +44,4 @@ Refer to `tsconfig.json` and `tslint.json` for syntax and coding practices. Othe
 #### Other references
 
 - [HTML Best Practices](https://github.com/hail2u/html-best-practices)
-- [Why you shouldn't use pixels"](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px#:~:text=A%20typical%20method%20is%20to,rem%20would%20now%20equal%2020px.)
+- [Why you shouldn't use pixels](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px#:~:text=A%20typical%20method%20is%20to,rem%20would%20now%20equal%2020px.)
