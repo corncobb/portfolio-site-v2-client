@@ -1,6 +1,7 @@
 import { createTheme, Fab, ThemeProvider } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import React, { useEffect, useReducer } from 'react';
+import { useLocation } from 'react-router';
 import { useRoutes } from 'react-router-dom';
 import { GlobalStyles } from 'src/components/global-styles';
 import { routes } from 'src/routes';
@@ -13,10 +14,16 @@ import { Typography } from './theme/typography';
 export const App = () => {
   const routing = useRoutes(routes);
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     StartConsoleLog();
   }, []);
+
+  // Scroll to the top of the page on every new page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const theme: any = React.useMemo(
     () =>

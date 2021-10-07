@@ -82,11 +82,7 @@ export const NavRoutes: React.FC<INavRoutesProps> = ({ onClick }) => {
                 component={NavLink}
                 to={route.path}
                 className={classes.listItem}
-                onClick={() => {
-                  onClick();
-                  // Scroll to top on route change
-                  window.scroll(0, 0);
-                }}
+                onClick={onClick}
               >
                 <ListItemText
                   classes={{ primary: classes.text }}

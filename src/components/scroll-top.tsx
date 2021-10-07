@@ -18,7 +18,7 @@ export const ScrollTop = (props: any) => {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100
+    threshold: 300
   });
 
   const handleClick = (event: any) => {
