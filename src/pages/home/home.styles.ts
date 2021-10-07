@@ -23,7 +23,9 @@ export const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, -50%)',
     textAlign: 'center',
     zIndex: 1,
-    userSelect: 'none'
+    userSelect: 'none',
+    width: '100%',
+    maxWidth: theme.spacing(45)
   },
   particlesCanvas: {
     position: 'absolute',

@@ -5,6 +5,9 @@ export const SocialLinks = {
   GitHub: 'https://github.com/corncobb'
 };
 
+export const ProfilePic =
+  'https://res.cloudinary.com/dpaucaa0u/image/upload/v1633566005/profile-pic-min_sqjs8s.jpg';
+
 export const Languages = [
   'TypeScript',
   'JavaScript',

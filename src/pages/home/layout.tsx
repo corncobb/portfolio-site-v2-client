@@ -1,9 +1,9 @@
 import { Avatar, Box, Grid, Typography } from '@material-ui/core';
 import React, { useContext, useEffect, useRef } from 'react';
 import Particles from 'react-tsparticles';
+import { ProfilePic } from 'src/assets/data';
 import { GlobalAppContext } from 'src/store/global-app-context';
 import Typed from 'typed.js';
-import ProfilePic from '../../assets/images/profile-pic-min.jpg';
 import { useStyles } from './home.styles';
 
 export const HomeLayout = () => {

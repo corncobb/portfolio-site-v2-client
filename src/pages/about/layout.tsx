@@ -16,10 +16,10 @@ import {
   Frameworks,
   Languages,
   Other,
+  ProfilePic,
   SocialLinks,
   Tools
 } from '../../assets/data';
-import ProfilePic from '../../assets/images/profile-pic-min.jpg';
 import Resume from '../../assets/resume/Resume-Cameron-Cobb-v1-2.pdf';
 import { useStyles } from './about.styles';
 
