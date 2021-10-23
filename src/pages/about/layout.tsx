@@ -21,7 +21,7 @@ import {
   SocialLinks,
   Tools
 } from '../../assets/data';
-import Resume from '../../assets/resume/Resume-Cameron-Cobb-v1-2.pdf';
+import Resume from '../../assets/resume/Resume-Cameron-Cobb-v2-1.pdf';
 import { useStyles } from './about.styles';
 
 export const AboutLayout = () => {
