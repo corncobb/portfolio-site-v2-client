@@ -82,8 +82,21 @@ export interface IProject {
 
 export const Projects = [
   {
+    title: 'Axolittles Staking',
+    slug: 'axolittles-staking',
+    stack: ['React', 'Web3', 'Moralis', 'TypeScript', 'MUI'],
+    description:
+      'I was contracted to build the staking website for Axolittles, a popular NFT project on the Ethereum blockchain. The website currently has 500 users and 13% of all Axolittles NFTs have been staked (10,000 Axolittles NFTs available). I built and deployed the entire website in 6 days.',
+    imageUrl:
+      'https://res.cloudinary.com/dpaucaa0u/image/upload/v1639028588/Staking_Axolittles.io_2021-12-08_21-42-32.png',
+    status: 'COMPLETED',
+    type: 'CONTRACT',
+    sourceUrl: '',
+    liveUrl: 'https://staking.axolittles.io/'
+  },
+  {
     title: 'Billionaire Bats Club',
-    slug: 'portfolio-site-v2',
+    slug: 'billionaire-bats-club',
     stack: [
       'React',
       'Azure Functions',
@@ -93,7 +106,7 @@ export const Projects = [
       'Azure SQL'
     ],
     description:
-      'Billionaire Bats Club is an NFT drop on the Solana blockchain. There were a total of 7500 bats available to be minted.\n\nLaunch was done in 2 phases: a pre-mint phase, and a normal live mint phase. The pre-mint phase involved a list of users who gave us their wallet address a month in advance. This is so they could mint early and at a discounted price (1 Sol each. Roughly $200 USD at the time of launch) and possibly mint a rare bat. The regular mint price was 1.5 Sol at the time of launch.\n\nWe stored the wallet addresses in an Azure SQL database with Azure functions as the pre-mint api. Once the pre-mint went live, users would connect their wallet and once they connected their wallet, it would check to see if they were part of the whitelist and if they were they could mint a bat. If not, then the mint button would disappear.\n\nThis project had to be built and live within 1 month and was hosted on Microsoft Azure.',
+      'Billionaire Bats Club is an NFT project on the Solana blockchain. There were a total of 7500 bats available to be minted.\n\nLaunch was done in 2 phases: a pre-mint phase, and a normal live mint phase. The pre-mint phase involved a list of users who gave us their wallet address a month in advance. This is so they could mint early and at a discounted price (1 Sol each. Roughly $200 USD at the time of launch) and possibly mint a rare bat. The regular mint price was 1.5 Sol at the time of launch.\n\nWe stored the wallet addresses in an Azure SQL database with Azure functions as the pre-mint api. Once the pre-mint went live, users would connect their wallet and once they connected their wallet, it would check to see if they were part of the whitelist and if they were they could mint a bat. If not, then the mint button would disappear.\n\nThis project had to be built and live within 1 month and was hosted on Microsoft Azure.',
     imageUrl:
       'https://res.cloudinary.com/dpaucaa0u/image/upload/v1635897172/Billionaire_Bats_Club_2021-11-02_16-52-04_youpla.png',
     status: 'COMPLETED',

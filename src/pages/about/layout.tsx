@@ -11,6 +11,7 @@ import {
 import { GitHub, LinkedIn } from '@material-ui/icons';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v2-3.pdf';
 import {
   CloudServices,
   DevTools,
@@ -21,7 +22,6 @@ import {
   SocialLinks,
   Tools
 } from '../../assets/data';
-import Resume from '../../assets/resume/Resume-Cameron-Cobb-v2-1.pdf';
 import { useStyles } from './about.styles';
 
 export const AboutLayout = () => {
