@@ -22,9 +22,9 @@ export const HomeLayout = () => {
     });
     const typed2 = new Typed(el2.current, {
       strings: [
-        'Web Developer',
+        'Full-Stack Software Engineer',
         'Mobile App Developer',
-        'Full-Stack Software Developer'
+        'Web3 and Solidity developer'
       ],
 
       startDelay: 1500,
