@@ -11,7 +11,7 @@ import {
 import { GitHub, LinkedIn } from '@material-ui/icons';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v2-6.pdf';
+import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v3.pdf';
 import {
   CloudServices,
   DevTools,
