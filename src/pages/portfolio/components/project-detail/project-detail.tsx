@@ -27,6 +27,7 @@ export const ProjectDetail = () => {
               className={classes.avatar}
               variant="square"
               alt={project.title}
+              draggable={false}
             />
           </Fade>
 
