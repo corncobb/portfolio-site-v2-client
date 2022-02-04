@@ -24,6 +24,7 @@ export const ProjectCard: React.FC<IProps> = ({ project }) => {
           height="180"
           image={project.imageUrl}
           alt={project.slug}
+          draggable={false}
         />
         <CardContent>
           <Typography gutterBottom variant="h4" component="h4">

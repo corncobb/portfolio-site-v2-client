@@ -11,7 +11,7 @@ import {
 import { GitHub, LinkedIn } from '@material-ui/icons';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v3.pdf';
+import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v3-1.pdf';
 import {
   CloudServices,
   DevTools,
@@ -57,7 +57,7 @@ export const AboutLayout = () => {
               component="h2"
               gutterBottom
             >
-              Software Developer
+              Software Engineer
             </Typography>
           </Fade>
           <Grid
@@ -122,8 +122,8 @@ export const AboutLayout = () => {
           </Typography>
           <Fade triggerOnce={true} delay={800}>
             <Typography variant="body1" color="textPrimary">
-              I am an experienced Software Developer with +3 years of
-              development experience. I am a Full-Stack Software Developer at{' '}
+              I am an experienced Software Engineer with +3 years of engineering
+              experience. I am a Full-Stack Software Engineer at{' '}
               <Link
                 href="https://foodnome.com/"
                 rel="noopener noreferrer nofollow"

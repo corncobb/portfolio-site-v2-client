@@ -1,7 +1,7 @@
 import { Box, Button, Container, Link, Typography } from '@material-ui/core';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v3.pdf';
+import Resume from 'src/assets/resume/Resume_Cameron_Cobb_v3-1.pdf';
 import { useStyles } from './resume.styles';
 
 export const ResumeLayout = () => {
@@ -10,7 +10,7 @@ export const ResumeLayout = () => {
   const experience = [
     {
       year: '2020',
-      title: 'Full-Stack Software Developer',
+      title: 'Full-Stack Software Engineer',
       company: (
         <Typography
           variant="h4"
@@ -28,7 +28,7 @@ export const ResumeLayout = () => {
       description: (
         <Typography variant="subtitle1" color="textPrimary">
           Foodnome is the first marketplace for permitted home restaurants in
-          the US. My role as a full-stack software developer at Foodnome
+          the US. My role as a full-stack software engineer at Foodnome
           includes:
           <ul>
             <Typography variant="subtitle1" component="li">
@@ -90,7 +90,7 @@ export const ResumeLayout = () => {
     },
     {
       year: '2017',
-      title: 'Contract Software Developer',
+      title: 'Contract Software Engineer',
 
       positionLocation: 'Reno / Sparks, NV & Remote',
       description: (
